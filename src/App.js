@@ -2,7 +2,6 @@ import React from "react";
 import './App.css';
 import './styles/global.css';
 import Box from "./components/box";
-import './components/box';
 
 
 
@@ -16,22 +15,35 @@ import './components/box';
 
  
 export class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+     water: 0,
+     heart: 0,
+     temperature: -10,
+     steps: 3000,
+    };
+  }
+
+  onHeartChange = (value) => {
+    this.setState({heart: this.state.heart + value});
+  }
+
   render() {
     return (
       <div className="container-fluid">
         <div className="row">
           <p>
-            <h1 className="text-primary">Heart : {heartMin} </h1>
-            <h1 className="text-primary">Temperature : {tempMin}</h1>
-            <h1 className="text-primary">Steps : {stepsMin} </h1>
+            <h5 className="text-primary">Heart : {heartMin} </h5>
+            <h5 className="text-primary">Temperature : {tempMin}</h5>
+            <h5 className="text-primary">Steps : {stepsMin} </h5>
           </p>
-        </div>
-        <div className="row">
-          <Box icon ={"directions_walk"}color={"black"}value={3000} unit={"steps"} />
-          <Box icon ={"favorite"}color={"red"}value={120} unit={"bpm"} />
-          <Box icon ={"wb_sunny"}color={"yellow"}value={-10} unit={"°C"} />
-          <Box icon ={"local_drink"}color={"#3a85ff" }value={1.5} unit={"L"} />
-          
+            
+            <Box icon ={"local_drink"}color={"#3a85ff" }value={1.5} unit={"L"} />
+            <Box icon ={"wb_sunny"}color={"yellow"}value={-10} unit={"°C"} />
+            <Box icon ={"favorite"}color={"red"}value={120} unit={"bpm"} />
+            <Box icon ={"directions_walk"}color={"black"}value={3000} unit={"steps"} />
         </div>
       </div>
       
