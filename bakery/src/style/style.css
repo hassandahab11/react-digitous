@@ -1,10 +1,27 @@
-button{
+
+body{text-align: center;
+    background-color: antiquewhite;
+    
+}
+button:nth-child(odd) {
+    background:green;
     width: 75px;
     height: 45px;
-}
+    margin-left: 10px;
+
+  }
+  
+  button:nth-child(even) {
+    background: rosybrown;
+    width: 75px;
+    height: 45px;
+    margin-left: 10px;
+  }
 
 input{
-    width: 200px;
+    width: 250px;
     height: 25px;
 }
+
+
 

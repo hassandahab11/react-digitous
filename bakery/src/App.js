@@ -68,9 +68,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" >
-        <Button onClick={this.selectAdd} isSelected={this.state.activeTabs === 'add' ? true : false}> Add </Button>
-        <Button onClick={this.selectList} isSelected={this.state.activeTabs === 'list' ? true : false}> List </Button>
-        <Button onClick={this.selectPay} isSelected={this.state.activeTabs === 'pay' ? true : false}> Pay </Button>
+        <Button style= {{backgroundColor:"blue"}} onClick={this.selectAdd} isSelected={this.state.activeTabs === 'add' ? true : false}> Add </Button>
+        <Button style= {{backgroundColor:"orange"}} onClick={this.selectList} isSelected={this.state.activeTabs === 'list' ? true : false}> List </Button>
+        <Button style= {{backgroundColor:"red"}} onClick={this.selectPay} isSelected={this.state.activeTabs === 'pay' ? true : false}> Pay </Button>
 
         {this.renderContent()}
       </div>

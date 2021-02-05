@@ -37,7 +37,7 @@ class Add extends Component {
                     <button type="button" className="btn btn-primary col-2" onClick={this.click}>Add</button>
                 </div>
                 <div className="row">
-                    <input type="range" value={this.state.price} onChange={this.updatePrice} min="1" max="10"></input>
+                    <input type="range" value={this.state.price} onChange={this.updatePrice} min="1" max="50"></input>
                     <span>{this.state.price}</span>
                 </div>
             </div>
