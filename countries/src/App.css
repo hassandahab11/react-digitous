@@ -1,0 +1,10 @@
+.countryImage{
+  width: 100px;
+  border-radius: 50%;
+  
+}
+
+.countryImage:hover{
+border-radius: 25%;
+width: 150px;
+}
